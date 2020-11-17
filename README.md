@@ -12,10 +12,6 @@ npm install react-native-agora-rawdata
 
 ```js
 import AgoraRawdata from "react-native-agora-rawdata";
-
-// ...
-
-const result = await AgoraRawdata.multiply(3, 7);
 ```
 
 ## Contributing

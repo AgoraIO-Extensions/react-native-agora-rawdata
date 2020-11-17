@@ -1,7 +1,13 @@
 import { NativeModules } from 'react-native';
 
 type AgoraRawdataType = {
-  multiply(a: number, b: number): Promise<number>;
+  registerAudioFrameObserver(engineHandle: number): Promise<void>;
+
+  unregisterAudioFrameObserver(): Promise<void>;
+
+  registerVideoFrameObserver(engineHandle: number): Promise<void>;
+
+  unregisterVideoFrameObserver(): Promise<void>;
 };
 
 const { AgoraRawdata } = NativeModules;

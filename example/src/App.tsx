@@ -1,17 +1,42 @@
 import * as React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { PermissionsAndroid, StyleSheet, Text, View } from 'react-native';
 import AgoraRawdata from 'react-native-agora-rawdata';
+import Agora, { RtcLocalView, RtcRemoteView } from 'react-native-agora';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
+  const [joined, setJoined] = React.useState<boolean>();
 
   React.useEffect(() => {
-    AgoraRawdata.multiply(3, 7).then(setResult);
+    const test = async () => {
+      await PermissionsAndroid.requestMultiple([
+        PermissionsAndroid.PERMISSIONS.CAMERA,
+        PermissionsAndroid.PERMISSIONS.RECORD_AUDIO,
+      ]);
+      const agora = await Agora.create(YOUR_APP_ID);
+      agora.addListener('JoinChannelSuccess', () => {
+        setJoined(true);
+      });
+      await agora.enableVideo();
+      await AgoraRawdata.registerAudioFrameObserver(
+        await agora.getNativeHandle()
+      );
+      await AgoraRawdata.registerVideoFrameObserver(
+        await agora.getNativeHandle()
+      );
+      await agora.joinChannel(undefined, '123', undefined, 456);
+    };
+
+    // eslint-disable-next-line jest/no-disabled-tests
+    test();
   }, []);
 
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Text>isJoined: {joined}</Text>
+      {joined && <RtcLocalView.SurfaceView style={styles.container} />}
+      {joined && (
+        <RtcRemoteView.SurfaceView style={styles.container} uid={123} />
+      )}
     </View>
   );
 }
@@ -19,7 +44,5 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 });

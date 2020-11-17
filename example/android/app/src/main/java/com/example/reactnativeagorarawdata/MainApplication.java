@@ -11,7 +11,7 @@ import com.facebook.soloader.SoLoader;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
-import com.reactnativeagorarawdata.AgoraRawdataPackage;
+import io.agora.rtc.rawdata.react.AgoraRawdataPackage;
 
 public class MainApplication extends Application implements ReactApplication {
 
