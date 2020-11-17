@@ -3,7 +3,7 @@ import { PermissionsAndroid, StyleSheet, Text, View } from 'react-native';
 import AgoraRawdata from 'react-native-agora-rawdata';
 import Agora, { RtcLocalView, RtcRemoteView } from 'react-native-agora';
 
-const config = require('../../../agora.config.json');
+const config = require('../agora.config.json');
 
 export default function App() {
   const [joined, setJoined] = React.useState<boolean>();
@@ -25,7 +25,12 @@ export default function App() {
       await AgoraRawdata.registerVideoFrameObserver(
         await agora.getNativeHandle()
       );
-      await agora.joinChannel(config.token, config.channelId, undefined, 456);
+      await agora.joinChannel(
+        config.token,
+        config.channelId,
+        undefined,
+        config.uid
+      );
     };
 
     // eslint-disable-next-line jest/no-disabled-tests
