@@ -11,48 +11,76 @@ import io.agora.rtc.rawdata.base.VideoFrame
 import java.util.*
 
 class AgoraRawdataModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(reactContext) {
+  private var audioObserver: IAudioFrameObserver? = null
+  private var videoObserver: IVideoFrameObserver? = null
+
   override fun getName(): String {
     return "AgoraRawdata"
   }
 
   @ReactMethod
   fun registerAudioFrameObserver(engineHandle: Double, promise: Promise) {
-    object : IAudioFrameObserver(engineHandle.toLong()) {
-      override fun onRecordAudioFrame(audioFrame: AudioFrame): Boolean {
-        return true
-      }
+    if (audioObserver == null) {
+      audioObserver = object : IAudioFrameObserver(engineHandle.toLong()) {
+        override fun onRecordAudioFrame(audioFrame: AudioFrame): Boolean {
+          return true
+        }
 
-      override fun onPlaybackAudioFrame(audioFrame: AudioFrame): Boolean {
-        return true
-      }
+        override fun onPlaybackAudioFrame(audioFrame: AudioFrame): Boolean {
+          return true
+        }
 
-      override fun onMixedAudioFrame(audioFrame: AudioFrame): Boolean {
-        return true
-      }
+        override fun onMixedAudioFrame(audioFrame: AudioFrame): Boolean {
+          return true
+        }
 
-      override fun onPlaybackAudioFrameBeforeMixing(uid: Int, audioFrame: AudioFrame): Boolean {
-        return true
+        override fun onPlaybackAudioFrameBeforeMixing(uid: Int, audioFrame: AudioFrame): Boolean {
+          return true
+        }
       }
-    }.registerAudioFrameObserver()
-    promise.resolve(0)
+    }
+    audioObserver?.registerAudioFrameObserver()
+    promise.resolve(null)
+  }
+
+  @ReactMethod
+  fun unregisterAudioFrameObserver(promise: Promise) {
+    audioObserver?.let {
+      it.unregisterAudioFrameObserver()
+      audioObserver = null
+    }
+    promise.resolve(null)
   }
 
   @ReactMethod
   fun registerVideoFrameObserver(engineHandle: Double, promise: Promise) {
-    object : IVideoFrameObserver(engineHandle.toLong()) {
-      override fun onCaptureVideoFrame(videoFrame: VideoFrame): Boolean {
-        Arrays.fill(videoFrame.getuBuffer(), 0)
-        Arrays.fill(videoFrame.getvBuffer(), 0)
-        return true
-      }
+    if (videoObserver == null) {
+      videoObserver = object : IVideoFrameObserver(engineHandle.toLong()) {
+        override fun onCaptureVideoFrame(videoFrame: VideoFrame): Boolean {
+          Arrays.fill(videoFrame.getuBuffer(), 0)
+          Arrays.fill(videoFrame.getvBuffer(), 0)
+          return true
+        }
 
-      override fun onRenderVideoFrame(uid: Int, videoFrame: VideoFrame): Boolean {
-        Arrays.fill(videoFrame.getuBuffer(), -128)
-        Arrays.fill(videoFrame.getvBuffer(), -128)
-        return true
+        override fun onRenderVideoFrame(uid: Int, videoFrame: VideoFrame): Boolean {
+          // unsigned char value 255
+          Arrays.fill(videoFrame.getuBuffer(), -1)
+          Arrays.fill(videoFrame.getvBuffer(), -1)
+          return true
+        }
       }
-    }.registerVideoFrameObserver()
-    promise.resolve(0)
+    }
+    videoObserver?.registerVideoFrameObserver()
+    promise.resolve(null)
+  }
+
+  @ReactMethod
+  fun unregisterVideoFrameObserver(promise: Promise) {
+    videoObserver?.let {
+      it.unregisterVideoFrameObserver()
+      videoObserver = null
+    }
+    promise.resolve(null)
   }
 
   companion object {
