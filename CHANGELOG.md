@@ -1,3 +1,10 @@
+## [0.1.3](https://github.com/LichKing-2234/react-native-agora-rawdata/compare/v0.1.2...v0.1.3) (2020-12-28)
+
+
+### Bug Fixes
+
+* upgrade Android header files ([a9597d5](https://github.com/LichKing-2234/react-native-agora-rawdata/commit/a9597d5e562435b86bb03dbf7cda3b7dd5e0c15e))
+
 ## [0.1.2](https://github.com/LichKing-2234/react-native-agora-rawdata/compare/v0.1.1...v0.1.2) (2020-12-28)
 
 
