@@ -68,7 +68,8 @@
   },
   "peerDependencies": {
     "react": "*",
-    "react-native": "*"
+    "react-native": "*",
+    "react-native-agora": ">=3.1.7"
   },
   "jest": {
     "preset": "react-native",
