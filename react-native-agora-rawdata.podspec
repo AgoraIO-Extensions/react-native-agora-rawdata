@@ -13,12 +13,12 @@ Pod::Spec.new do |s|
   s.platforms    = { :ios => "9.0" }
   s.source       = { :git => "https://github.com/LichKing-2234/react-native-agora-rawdata.git", :tag => "#{s.version}" }
 
-  
+
   s.source_files = "ios/**/*.{h,m,mm,swift}", "cpp/apple/**/*.{h,cpp}"
-  
+
   s.static_framework = true
   s.swift_version = "4.0"
-  
+
   s.dependency "React"
-  s.dependency "AgoraRtcEngine_iOS_Crypto", "3.1.2"
+  s.dependency "AgoraRtcEngine_iOS"
 end
