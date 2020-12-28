@@ -1,3 +1,10 @@
+## [0.1.2](https://github.com/LichKing-2234/react-native-agora-rawdata/compare/v0.1.1...v0.1.2) (2020-12-28)
+
+
+### Features
+
+* adapt to `react-native-agora@3.2.+` ([a174c44](https://github.com/LichKing-2234/react-native-agora-rawdata/commit/a174c446f85e348c26580ac0c86ca371b027073e))
+
 ## [0.1.1](https://github.com/LichKing-2234/react-native-agora-rawdata/compare/v0.1.0...v0.1.1) (2020-11-20)
 
 
