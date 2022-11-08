@@ -31,16 +31,21 @@ project.xcworkspace
 
 # Android/IJ
 #
+.classpath
 .cxx
-.idea
 .gradle
+.idea
+.project
+.settings
 local.properties
 android.iml
 
 # Cocoapods
 #
 example/ios/Pods
-Podfile.lock
+
+# Ruby
+example/vendor/
 
 # node.js
 #
@@ -48,7 +53,6 @@ node_modules/
 npm-debug.log
 yarn-debug.log
 yarn-error.log
-yarn.lock
 
 # BUCK
 buck-out/

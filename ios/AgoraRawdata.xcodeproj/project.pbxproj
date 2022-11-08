@@ -7,12 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F597DA982563AB0300A73605 /* AgoraRawdataBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = F597DA972563AB0300A73605 /* AgoraRawdataBridge.m */; };
-		F5B73F0F255B9990006AF3D9 /* AgoraVideoFrameObserver.mm in Sources */ = {isa = PBXBuildFile; fileRef = F5B73F09255B9990006AF3D9 /* AgoraVideoFrameObserver.mm */; };
-		F5B73F10255B9990006AF3D9 /* AgoraAudioFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = F5B73F0A255B9990006AF3D9 /* AgoraAudioFrame.m */; };
-		F5B73F11255B9990006AF3D9 /* AgoraAudioFrameObserver.mm in Sources */ = {isa = PBXBuildFile; fileRef = F5B73F0B255B9990006AF3D9 /* AgoraAudioFrameObserver.mm */; };
-		F5B73F12255B9990006AF3D9 /* AgoraVideoFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = F5B73F0E255B9990006AF3D9 /* AgoraVideoFrame.m */; };
-		F5B73F16255B99A4006AF3D9 /* AgoraRawdata.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B73F15255B99A4006AF3D9 /* AgoraRawdata.swift */; };
+		5E555C0D2413F4C50049A1A2 /* AgoraRawdata.mm in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* AgoraRawdata.mm */; };
+		F5B4870529194F18009278A8 /* VideoFrameObserver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5B4870329194F18009278A8 /* VideoFrameObserver.cpp */; };
+		F5B4870629194F18009278A8 /* plugin_c_api.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5B4870429194F18009278A8 /* plugin_c_api.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,17 +26,13 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libAgoraRawdata.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAgoraRawdata.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		F597DA972563AB0300A73605 /* AgoraRawdataBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgoraRawdataBridge.m; sourceTree = "<group>"; };
-		F5B73F07255B9990006AF3D9 /* AgoraAudioFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgoraAudioFrame.h; sourceTree = "<group>"; };
-		F5B73F08255B9990006AF3D9 /* AgoraVideoFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgoraVideoFrame.h; sourceTree = "<group>"; };
-		F5B73F09255B9990006AF3D9 /* AgoraVideoFrameObserver.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AgoraVideoFrameObserver.mm; sourceTree = "<group>"; };
-		F5B73F0A255B9990006AF3D9 /* AgoraAudioFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgoraAudioFrame.m; sourceTree = "<group>"; };
-		F5B73F0B255B9990006AF3D9 /* AgoraAudioFrameObserver.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AgoraAudioFrameObserver.mm; sourceTree = "<group>"; };
-		F5B73F0C255B9990006AF3D9 /* AgoraAudioFrameObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgoraAudioFrameObserver.h; sourceTree = "<group>"; };
-		F5B73F0D255B9990006AF3D9 /* AgoraVideoFrameObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgoraVideoFrameObserver.h; sourceTree = "<group>"; };
-		F5B73F0E255B9990006AF3D9 /* AgoraVideoFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgoraVideoFrame.m; sourceTree = "<group>"; };
-		F5B73F14255B99A4006AF3D9 /* AgoraRawdata-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AgoraRawdata-Bridging-Header.h"; sourceTree = "<group>"; };
-		F5B73F15255B99A4006AF3D9 /* AgoraRawdata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgoraRawdata.swift; sourceTree = "<group>"; };
+		B3E7B5891CC2AC0600A0062D /* AgoraRawdata.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AgoraRawdata.mm; sourceTree = "<group>"; };
+		F5B4870029194F18009278A8 /* plugin_base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = plugin_base.h; sourceTree = "<group>"; };
+		F5B4870129194F18009278A8 /* VideoFrameObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoFrameObserver.h; sourceTree = "<group>"; };
+		F5B4870229194F18009278A8 /* plugin_c_api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = plugin_c_api.h; sourceTree = "<group>"; };
+		F5B4870329194F18009278A8 /* VideoFrameObserver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VideoFrameObserver.cpp; sourceTree = "<group>"; };
+		F5B4870429194F18009278A8 /* plugin_c_api.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = plugin_c_api.cpp; sourceTree = "<group>"; };
+		F5B4870729194F2D009278A8 /* AgoraRawdata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgoraRawdata.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,35 +57,24 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-				F5149F4E255AB5D1007E72A5 /* Base */,
-				F5149F4B255AB5D1007E72A5 /* React */,
+				F5B4870729194F2D009278A8 /* AgoraRawdata.h */,
+				B3E7B5891CC2AC0600A0062D /* AgoraRawdata.mm */,
+				F5B486FF29194F18009278A8 /* cxx */,
 				134814211AA4EA7D00B7C361 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		F5149F4B255AB5D1007E72A5 /* React */ = {
+		F5B486FF29194F18009278A8 /* cxx */ = {
 			isa = PBXGroup;
 			children = (
-				F597DA972563AB0300A73605 /* AgoraRawdataBridge.m */,
-				F5B73F15255B99A4006AF3D9 /* AgoraRawdata.swift */,
-				F5B73F14255B99A4006AF3D9 /* AgoraRawdata-Bridging-Header.h */,
+				F5B4870029194F18009278A8 /* plugin_base.h */,
+				F5B4870129194F18009278A8 /* VideoFrameObserver.h */,
+				F5B4870229194F18009278A8 /* plugin_c_api.h */,
+				F5B4870329194F18009278A8 /* VideoFrameObserver.cpp */,
+				F5B4870429194F18009278A8 /* plugin_c_api.cpp */,
 			);
-			path = React;
-			sourceTree = "<group>";
-		};
-		F5149F4E255AB5D1007E72A5 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				F5B73F07255B9990006AF3D9 /* AgoraAudioFrame.h */,
-				F5B73F0A255B9990006AF3D9 /* AgoraAudioFrame.m */,
-				F5B73F0C255B9990006AF3D9 /* AgoraAudioFrameObserver.h */,
-				F5B73F0B255B9990006AF3D9 /* AgoraAudioFrameObserver.mm */,
-				F5B73F08255B9990006AF3D9 /* AgoraVideoFrame.h */,
-				F5B73F0E255B9990006AF3D9 /* AgoraVideoFrame.m */,
-				F5B73F0D255B9990006AF3D9 /* AgoraVideoFrameObserver.h */,
-				F5B73F09255B9990006AF3D9 /* AgoraVideoFrameObserver.mm */,
-			);
-			path = Base;
+			name = cxx;
+			path = ../plugin/cxx;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +108,6 @@
 				TargetAttributes = {
 					58B511DA1A9E6C8500147676 = {
 						CreatedOnToolsVersion = 6.1.1;
-						LastSwiftMigration = 1210;
 					};
 				};
 			};
@@ -153,12 +134,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5B73F0F255B9990006AF3D9 /* AgoraVideoFrameObserver.mm in Sources */,
-				F5B73F12255B9990006AF3D9 /* AgoraVideoFrame.m in Sources */,
-				F597DA982563AB0300A73605 /* AgoraRawdataBridge.m in Sources */,
-				F5B73F11255B9990006AF3D9 /* AgoraAudioFrameObserver.mm in Sources */,
-				F5B73F16255B99A4006AF3D9 /* AgoraRawdata.swift in Sources */,
-				F5B73F10255B9990006AF3D9 /* AgoraAudioFrame.m in Sources */,
+				5E555C0D2413F4C50049A1A2 /* AgoraRawdata.mm in Sources */,
+				F5B4870529194F18009278A8 /* VideoFrameObserver.cpp in Sources */,
+				F5B4870629194F18009278A8 /* plugin_c_api.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +171,7 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -243,6 +222,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"EXCLUDED_ARCHS[sdk=*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -261,41 +241,32 @@
 		58B511F01A9E6C8500147676 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
 				);
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = AgoraRawdata;
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "React/AgoraRawdata-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		58B511F11A9E6C8500147676 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
 				);
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = AgoraRawdata;
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "React/AgoraRawdata-Bridging-Header.h";
-				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

@@ -1,15 +1,34 @@
-import { NativeModules } from 'react-native';
+import { NativeModules, Platform } from 'react-native';
 
-type AgoraRawdataType = {
-  registerAudioFrameObserver(engineHandle: number): Promise<void>;
+const LINKING_ERROR =
+  `The package 'react-native-agora-rawdata' doesn't seem to be linked. Make sure: \n\n` +
+  Platform.select({ ios: "- You have run 'pod install'\n", default: '' }) +
+  '- You rebuilt the app after installing the package\n' +
+  '- You are not using Expo Go\n';
 
-  unregisterAudioFrameObserver(): Promise<void>;
+const AgoraRawdata = NativeModules.AgoraRawdata
+  ? NativeModules.AgoraRawdata
+  : new Proxy(
+      {},
+      {
+        get() {
+          throw new Error(LINKING_ERROR);
+        },
+      }
+    );
 
-  registerVideoFrameObserver(engineHandle: number): Promise<void>;
+export function createPlugin(engineHandle: number): void {
+  AgoraRawdata.createPlugin(`${engineHandle}`);
+}
 
-  unregisterVideoFrameObserver(): Promise<void>;
-};
+export function destroyPlugin(): void {
+  AgoraRawdata.destroyPlugin();
+}
 
-const { AgoraRawdata } = NativeModules;
+export function enablePlugin(): boolean {
+  return AgoraRawdata.enablePlugin();
+}
 
-export default AgoraRawdata as AgoraRawdataType;
+export function disablePlugin(): boolean {
+  return AgoraRawdata.disablePlugin();
+}
