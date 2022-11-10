@@ -17,7 +17,7 @@ RCT_EXPORT_MODULE()
 RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(createPlugin: (NSString *)engineHandle)
 {
     if (!_plugin) {
-        _plugin = CreatePlugin((void *)engineHandle.longLongValue);
+        _plugin = CreateSamplePlugin((void *)engineHandle.longLongValue);
     }
     return [NSNull null];
 }
@@ -25,7 +25,8 @@ RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(createPlugin: (NSString *)engineHandle)
 RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(destroyPlugin)
 {
     if (_plugin) {
-        DestroyPlugin(_plugin);
+        DestroySamplePlugin(_plugin);
+        _plugin = nullptr;
     }
     return [NSNull null];
 }
