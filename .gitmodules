@@ -1,4 +1,4 @@
 [submodule "plugin"]
 	path = plugin
 	url = https://github.com/AgoraIO-Extensions/RawDataPluginSample.git
-	branch = test
+	branch = main
