@@ -34,7 +34,7 @@
     "release": "release-it",
     "example": "yarn --cwd example",
     "bootstrap": "yarn example && yarn install && yarn example pods",
-    "preinstall": "git init && git submodule add -f -b main https://github.com/AgoraIO-Extensions/RawDataPluginSample.git plugin"
+    "preinstall": "git init && rm -rf plugin && git submodule add -f -b main https://github.com/AgoraIO-Extensions/RawDataPluginSample.git plugin"
   },
   "keywords": [
     "react-native",
