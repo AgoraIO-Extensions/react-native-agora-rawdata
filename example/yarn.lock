@@ -3338,10 +3338,10 @@ react-is@^17.0.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
   integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
 
-react-native-agora@4.2.0-dev.4:
-  version "4.2.0-dev.4"
-  resolved "https://registry.yarnpkg.com/react-native-agora/-/react-native-agora-4.2.0-dev.4.tgz#9d6a3cc87fa7ae48cf41d09a3ad5c24adbdc5320"
-  integrity sha512-tuI+HUhiCYdGQUcj5pAD1jK+w1ZNHkvmf8XW0dKv+vENztIyLoHO0ZkzeCweqqPcM1kWx/Suao7acxezwDa+zA==
+react-native-agora@4.2.0-dev.13:
+  version "4.2.0-dev.13"
+  resolved "https://registry.npmjs.org/react-native-agora/-/react-native-agora-4.2.0-dev.13.tgz#30458a91eab50e016e8ba88a672b54110e34a22e"
+  integrity sha512-bCwIPaaIq1yqrFKuRuqAt/5389BBUU0xP94PBclvwUX2mvm9+aslZSf3oMFYW9gi9Oz0fBf/dvpVHSPDfhp1zg==
   dependencies:
     buffer "^6.0.3"
     json-bigint "^1.0.0"
